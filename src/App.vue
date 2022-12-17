@@ -1,5 +1,6 @@
 <template>
-  <UserCard UsName="zevvs" FullName="Олежа Сергеевич"/>
+  <UserCard v-bind:UsName="UsName" v-bind:FullName="FullName"/>
+  <button v-on:click="getList()">get data</button>
 </template>
 
 <script>
@@ -9,6 +10,17 @@ export default {
   name: 'App',
   components: {
     UserCard
+  },
+  methods : {
+    getList(){
+      this.axios.get('https://randomuser.me/api').then((response) => {console.log(response.data)})
+    },
+    data(){
+      return {
+        UsName: 'gull',
+        FullName: 'Серый Олежиков'
+      }
+    }
   }
 }
 </script>
