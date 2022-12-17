@@ -1,10 +1,9 @@
 <template>
   <div class="user-card">
         <img src="../assets/img/70.jpg" class="user-photo">
-        <p class="user-nickname">romashka</p>
+        <p class="user-nickname">{{UsName}}</p>
         <p class="user-name">
-            Иванов Иван<br>
-            Иванович
+            {{FullName}}
         </p>
         <hr>
         <p class="user-info-item">
@@ -26,7 +25,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    UsName: String,
+    FullName: String
   }
 }
 </script>

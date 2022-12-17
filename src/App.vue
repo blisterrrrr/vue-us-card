@@ -1,5 +1,5 @@
 <template>
-  <UserCard/>
+  <UserCard UsName="zevvs" FullName="Олежа Сергеевич"/>
 </template>
 
 <script>
